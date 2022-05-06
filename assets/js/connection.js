@@ -2,13 +2,13 @@ $(document).ready(
 
     function(){
         $.ajax({
-            url: "https://imodream-api.herokuapp.com/api/proprety",
+            url: "https://imodream-api.herokuapp.com/api/users",
             type: "GET",
             dataType: 'json',
             success: function(result) {
                 console.log(result);
-                $('#Moradia_Tipo').text(result)
-                var down = document.getElementById("Moradia_Tipo");
+                $('#name').text(result)
+                var down = document.getElementById("name");
                 var obj = JSON.stringify(result);
                 var res = [""];
 
