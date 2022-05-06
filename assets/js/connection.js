@@ -8,16 +8,17 @@ $(document).ready(
             success: function(result) {
                 console.log(result);
                 $('#name').text(result)
-                var down = document.getElementById("name");
+                var down = document.getElementById("list");
                 var obj = JSON.stringify(result);
+                console.log(obj);
                 var res = [""];
 
-                for(var i in obj)
-                    res.push(obj[i]);
-                down.innerHTML = obj[i] ;
-
-                {
-
+                for(var i in result) {
+                    res.push(obj[i].name);
+                    //down.innerHTML = obj[i];
+                    let li = document.createElement("li");
+                    li.innerText = result[i].name;
+                    down.appendChild(li);
                 }
             }
 
