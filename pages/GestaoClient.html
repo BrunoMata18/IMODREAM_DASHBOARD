@@ -20,6 +20,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.1" rel="stylesheet" />
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/connection.js"></script>
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -145,7 +147,7 @@
           <thead>
             <tr>
               <th>Nome</th>
-              <th class="d-none d-xl-table-cell">Data de registação&nbsp;</th>
+              <th class="d-none d-xl-table-cell">Data de Aniversário</th>
               <th class="d-none d-xl-table-cell">Tipo de utilizador&nbsp;</th>
               <th><input class="form-control mr-sm-2" type="search" placeholder="Nome" aria-label="Search"></th>
               <th>  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button></th>
@@ -153,11 +155,33 @@
           </thead>
           <tbody>
             <tr>
-              <td>Bruno Mata</td>
-              <td class="d-none d-xl-table-cell">01/04/2022</td>
-              <td class="d-none d-xl-table-cell">Admin</td>
-              <td><a href="#" class="btn btn-primary">Editar&nbsp;</a></td>
-              <td><a href="#" class="btn btn-primary">Eliminar&nbsp;</a> </td>
+              <td id="list"></td>
+              <td class="d-none d-xl-table-cell"></td>
+              <td class="d-none d-xl-table-cell"></td>
+              <td>
+                <div class="btn-group">
+                <button type="button" class="btn btn-warning">Editar</button>
+                <button type="button" class="btn btn-warning dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <div class="dropdown-divider"></div>
+                </div>
+              </div>
+              </td>
+              <td>
+                <div class="btn-group">
+                <button type="button" class="btn btn-danger">Desativar</button>
+                <button type="button" class="btn btn-danger dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <div class="dropdown-divider"></div>
+                </div>
+              </div>
+              </td>
             </tr>
           </tbody>
         </table>

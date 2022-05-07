@@ -16,12 +16,15 @@ $(document).ready(
                 for(var i in result) {
                     res.push(obj[i].name);
                     //down.innerHTML = obj[i];
-                    let li = document.createElement("li");
-                    li.innerText = result[i].name;
-                    down.appendChild(li);
+                    let td = document.createElement("td");
+                    td.innerText = result[i].name;
+                    down.appendChild(td);
+
                 }
             }
 
         });
     }
+
 );
+
