@@ -2,7 +2,7 @@ $(document).ready(
 
     function(){
         $.ajax({
-            url: "https://imodream-api.herokuapp.com/api/users",
+            url: "https://imodream-api.herokuapp.com/api/imo",
             type: "GET",
             dataType: 'json',
             success: function(result) {
@@ -28,8 +28,8 @@ $(document).ready(
                 for (let i in result)
                 {
                     html += `<tr><td>${result[i].name}</td>
-                    <td>${result[i].bdate}</td>
-                    <td>${result[i].utype}</td>
+                    <td>${result[i].criacao}</td>
+                    <td>${result[i].email}</td>
                     ${buttons}</tr>`
                 }
 

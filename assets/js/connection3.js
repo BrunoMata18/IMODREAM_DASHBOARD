@@ -25,15 +25,18 @@ $(document).ready(
                     "                </div>" +
                     "              </td>"
 
-                for (let i in result)
-                {
-                    html += `<tr><td>${result[i].name}</td>
-                    <td>${result[i].bdate}</td>
-                    <td>${result[i].utype}</td>
-                    ${buttons}</tr>`
-                }
+                for (let i in result) {
+                    if (result[i].utype == "Vendedor") {
 
+                        html += `<tr><td>${result[i].name}</td>
+                        <td>${result[i].bdate}</td>
+                        <td>${result[i].utype}</td>
+                        ${buttons}</tr>`
+                    }
+
+                }
                 tabela.innerHTML = html
+
             }
 
         });

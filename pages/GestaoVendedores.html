@@ -20,6 +20,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.1" rel="stylesheet" />
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/connection3.js"></script>
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -151,21 +153,8 @@
               <th>  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button></th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-                <td>João Garcia</td>
-                <td class="d-none d-xl-table-cell">03/04/2022</td>
-                <td class="d-none d-xl-table-cell">Vendedor</td>
-                <td><a href="#" class="btn btn-primary">Editar&nbsp;</a></td>
-                <td><a href="#" class="btn btn-primary">Eliminar&nbsp;</a> </td>
-              </tr>
-              <tr>
-                <td>Felipe Sabbado</td>
-                <td class="d-none d-xl-table-cell">06/04/2022</td>
-                <td class="d-none d-xl-table-cell">Vendedor</td>
-                <td><a href="#" class="btn btn-primary">Editar&nbsp;</a></td>
-                <td><a href="#" class="btn btn-primary">Eliminar&nbsp;</a> </td>
-              </tr>
+          <tbody id="tabela">
+
           </tbody>
         </table>
       </div>
