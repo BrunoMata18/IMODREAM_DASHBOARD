@@ -27,11 +27,13 @@ $(document).ready(
 
                 for (let i in result) {
                     if (result[i].utype == "Vendedor") {
-
-                        html += `<tr><td>${result[i].name}</td>
-                        <td>${result[i].bdate}</td>
-                        <td>${result[i].utype}</td>
-                        ${buttons}</tr>`
+                        html += `<tr>
+                    <td>${result[i].name}</td>
+                    <td>${result[i].bdate}</td>
+                    <td>${result[i].utype}</td>
+                    <td>${result[i].email}</td>
+                    <td>${result[i].phoneN}</td>
+                    ${buttons}</tr>`
                     }
 
                 }

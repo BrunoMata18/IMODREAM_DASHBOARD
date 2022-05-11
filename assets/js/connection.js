@@ -27,9 +27,12 @@ $(document).ready(
 
                 for (let i in result)
                 {
-                    html += `<tr><td>${result[i].name}</td>
+                    html += `<tr>
+                    <td>${result[i].name}</td>
                     <td>${result[i].bdate}</td>
                     <td>${result[i].utype}</td>
+                    <td>${result[i].email}</td>
+                    <td>${result[i].phoneN}</td>
                     ${buttons}</tr>`
                 }
 

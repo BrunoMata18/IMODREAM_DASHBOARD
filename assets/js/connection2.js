@@ -30,6 +30,7 @@ $(document).ready(
                     html += `<tr><td>${result[i].name}</td>
                     <td>${result[i].criacao}</td>
                     <td>${result[i].email}</td>
+                    <td>${result[i].phoneN}</td>
                     ${buttons}</tr>`
                 }
 
