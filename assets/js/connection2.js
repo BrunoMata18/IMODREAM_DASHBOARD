@@ -13,14 +13,14 @@ $(document).ready(
                 let tabela = document.querySelector("#tabela")
                 let html = ""
                 let buttons = "<td>" +
-                    "                <div class=\"btn-group\">" +
-                    "                  <button type=\"button\" class=\"btn btn-warning\">Editar</button>" +
+                    "                <div class='btn-group'>" +
+                    "                  <button type='button' class='btn btn-warning fas fa-edit'></button>" +
                     "                </button>" +
                     "              </div>" +
                     "              </td>" +
                     "              <td>" +
-                    "                <div class=\"btn-group\">" +
-                    "                  <button type=\"button\" class=\"btn btn-danger\">Desativar</button>" +
+                    "                <div class='btn-group'>" +
+                    "                  <button type='button' class='btn btn-danger fas fa-ban'></button>" +
                     "                  </button>" +
                     "                </div>" +
                     "              </td>"
