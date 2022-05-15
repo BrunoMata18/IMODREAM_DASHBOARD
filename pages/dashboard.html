@@ -21,7 +21,7 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.1" rel="stylesheet" />
   <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/js/connection.js"></script>
+  <script src="../assets/js/jsmapa.js"></script>
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -137,8 +137,16 @@
 
   <!-- Body -->
   <!-- Default box -->
+    <div id="map" style="width: 99%;height: 600px;position: relative"></div>
 
-    <ul id="list"></ul>
+    <script type="module" src="../assets/js/jsmapa.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ3aOUkGciA-jbx5MeTDD7-UtACABQUG0&callback=initMap&v=weekly"
+            defer
+    ></script>
+
+    </div>
+
 
 
     <!-- End of Body -->
