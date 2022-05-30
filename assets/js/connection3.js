@@ -6,7 +6,6 @@ $(document).ready(
             type: "GET",
             dataType: 'json',
             success: function(result) {
-                console.log(result);
                 $('#name').text(result)
                 var obj = JSON.stringify(result);
                 console.log(obj);
