@@ -27,10 +27,10 @@ $(document).ready(
 
                 for (let i in result)
                 {
-                    html += `<tr><td>${result[i].name}</td>
-                    <td>${result[i].criacao}</td>
-                    <td>${result[i].email}</td>
-                    <td>${result[i].phoneN}</td>
+                    html += `<tr><td>${result[i].Name}</td>
+                    <td>${result[i].Criacao}</td>
+                    <td>${result[i].Email}</td>
+                    <td>${result[i].PhoneN}</td>
                     ${buttons}</tr>`
                 }
 
