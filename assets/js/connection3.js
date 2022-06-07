@@ -1,5 +1,4 @@
 $(document).ready(
-
     function(){
         $.ajax({
             url: "https://imodream-api.herokuapp.com/api/users",

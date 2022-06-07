@@ -1,32 +1,37 @@
-async function createUser() {
+$(document).ready(function() {
 
-    let res = document.getElementById("result");
+    $('#btnSubmit').on('click', function(event) {
 
-    let data = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        pw: document.getElementById("pw").value,
-        morada: document.getElementById("morada").value,
-        bdate: document.getElementById("bdate").value,
-        phoneN: document.getElementById("phoneN").value
-    }
-    console.log("[UtilizadorCriado] data = " + JSON.stringify(data));
-    try {
-        let newUser = await $.ajax({
-            url: "https://imodream-api.herokuapp.com/api/users/add_users",
-            method: "post",
-            data: JSON.stringify(data),
-            contentType: "application/json",
-            dataType: "json"
+        // prevent form default behaviour
+        event.preventDefault();
+
+        // disabled the submit button
+        $("#btnSubmit").prop("disabled", true);
+
+        const formData = {
+            Name: jQuery('[Name=Name]').val(),
+            Email: jQuery('[name=Email]').val(),
+            Pw: jQuery('[name=Pw]').val(),
+            Morada: jQuery('[name=Morada]').val(),
+            Criacao: jQuery('[name=Criacao]').val(),
+            PhoneN: jQuery('[name=PhoneN]').val()
+        }; //Array
+
+        $.ajax({
+            url : "https://imodream-api.herokuapp.com/api/imo/add_imo",
+            type: "POST",
+            data : formData, // data in json format
+            async : false, // enable or disable async (optional, but suggested as false if you need to populate data afterwards)
+            success: function(response, textStatus, jqXHR) {
+                console.log(response);
+                localStorage.setItem("imo", JSON.stringify(response))
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                console.log(errorThrown);
+            }
         });
-    } catch (err) {
-        console.log(err);
-        if (err.responseJSON) {
-            res.innerHTML = err.responseJSON.msg;
-        } else {
-            res.innerHTML = "Was not able to add product";
-        }
-    }
-}
-
-//Adicionar toaster mensagem de erro/sucesso
+    });
+});
